@@ -1,4 +1,5 @@
 import './App.css'
+import Overview from './components/Overview/Overview'
 
 function App() {
   return (
@@ -11,7 +12,27 @@ function App() {
         </header>
 
         <main className="dashboard-container">
-          <p>widgets will go here</p>
+          <div className="row">
+            <Overview />
+          </div>
+
+          <div className="row row-split">
+            <div className="col-wide">
+              
+            </div>
+            <div className="col-narrow">
+              
+            </div>
+          </div>
+
+          <div className="row row-split">
+            <div className="col-half">
+              
+            </div>
+            <div className="col-half">
+              
+            </div>
+          </div>
         </main>
 
       </div>
