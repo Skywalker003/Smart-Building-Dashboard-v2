@@ -1,5 +1,6 @@
 import './App.css'
 import Overview from './components/Overview/Overview'
+import ProductUpdates from './components/ProductUpdates/ProductUpdates'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
               
             </div>
             <div className="col-narrow">
-              
+              <ProductUpdates />
             </div>
           </div>
 
