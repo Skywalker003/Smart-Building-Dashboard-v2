@@ -2,6 +2,7 @@ import './App.css'
 import Overview from './components/Overview/Overview'
 import ProductUpdates from './components/ProductUpdates/ProductUpdates'
 import AssetHealth from './components/AssetHealth/AssetHealth'
+import BuildingMap from './components/BuildingMap/BuildingMap'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
 
           <div className="row row-split">
             <div className="col-wide">
-              
+              <BuildingMap />
             </div>
             <div className="col-narrow">
               <ProductUpdates />
