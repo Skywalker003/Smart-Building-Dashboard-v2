@@ -11,8 +11,10 @@ function App() {
       <div className="dashboard">
 
         <header className="header">
-          <h1>Smart Building Dashboard</h1>
-          <p>Admin Panel</p>
+          <div className="header-left">
+            <h1>Smart Building Dashboard</h1>
+            <p>Admin Panel</p>
+          </div>
         </header>
 
         <main className="dashboard-container">

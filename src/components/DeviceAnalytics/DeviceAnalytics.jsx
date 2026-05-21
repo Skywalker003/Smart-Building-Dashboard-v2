@@ -9,6 +9,13 @@ export default function DeviceAnalytics() {
 
     const [retry, setRetry] = useState(0)
 
+    const legendItems = [
+        { color: '#22c55e', label: 'Healthy' },
+        { color: '#f59e0b', label: 'Warning' },
+        { color: '#ef4444', label: 'Critical' },
+    ]
+
+
     useEffect(() => {
 
         if (retry ===0){
@@ -63,13 +70,22 @@ export default function DeviceAnalytics() {
             <ResponsiveContainer width="100%" height={300}>
                 <BarChart data={data}>
                     <XAxis dataKey="month" />
-                    <YAxis />
+                    <YAxis label={{ value: 'Devices', angle: -90, position: 'insideLeft', offset: 10 }} />
                     <Tooltip />
                     <Bar dataKey="healthy" fill="#4caf50" />
                     <Bar dataKey="warning" fill="#ff9800" />
                     <Bar dataKey="critical" fill="#f44336" />
                 </BarChart>
             </ResponsiveContainer>
+            <div className="chart-legend">
+                {legendItems.map(item => (
+                <div className="legend-item" key={item.label}>
+                    <span className="legend-dot" style={{ backgroundColor: item.color }}></span>
+                    <span className="legend-label">{item.label}</span>
+                </div>
+                ))}
+            </div>
+
         </div>
     )
 
