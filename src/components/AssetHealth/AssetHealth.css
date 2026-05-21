@@ -83,3 +83,28 @@
   color: #64748b;
   white-space: nowrap;
 }
+
+@media (max-width: 480px) {
+  .floor-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .floor-name {
+    font-weight: 600;
+  }
+
+  .asset-values {
+    flex-wrap: wrap;
+  }
+
+  .value {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .energy {
+    font-size: 11px;
+  }
+}

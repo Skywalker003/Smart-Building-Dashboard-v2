@@ -27,3 +27,9 @@
 .error-card button:hover {
     background-color: #1e4ed8;
 }
+
+@media (max-width: 480px) {
+  .widget {
+    padding: 12px 8px;
+  }
+}
