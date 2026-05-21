@@ -1,6 +1,7 @@
 import './App.css'
 import Overview from './components/Overview/Overview'
 import ProductUpdates from './components/ProductUpdates/ProductUpdates'
+import AssetHealth from './components/AssetHealth/AssetHealth'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
 
           <div className="row row-split">
             <div className="col-half">
-              
+              <AssetHealth />
             </div>
             <div className="col-half">
               
