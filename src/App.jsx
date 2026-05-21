@@ -3,6 +3,7 @@ import Overview from './components/Overview/Overview'
 import ProductUpdates from './components/ProductUpdates/ProductUpdates'
 import AssetHealth from './components/AssetHealth/AssetHealth'
 import BuildingMap from './components/BuildingMap/BuildingMap'
+import DeviceAnalytics from './components/DeviceAnalytics/DeviceAnalytics'
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
               <AssetHealth />
             </div>
             <div className="col-half">
-              
+              <DeviceAnalytics />
             </div>
           </div>
         </main>
