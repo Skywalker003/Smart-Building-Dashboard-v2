@@ -69,4 +69,4 @@ public/
 
 ## Author
 
-Srivika Sramadas — [github.com/Skywalker003](https://github.com/Skywalker003)
+Sri Vikas S R — [github.com/Skywalker003](https://github.com/Skywalker003)
