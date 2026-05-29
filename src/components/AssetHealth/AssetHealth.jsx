@@ -1,15 +1,20 @@
-import { useState, useEffect } from "react";
-import './AssetHealth.css'
+import { useState } from "react";
+import './AssetHealth.css';
+import useFetch from '../../useFetch'
 
 export default function AssetHealth() {
+  const { data, loading, error } = useFetch('/data/assetHealth.json')
+  const [open, setOpen] = useState(null)
 
-    const [assets, setAssets] = useState([]);
+  /* function AssetHealth() {
+
+   const [assets, setAssets] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState(null);*/
 
-    const [open, setOpen] = useState(null);
+    
 
-    useEffect(() => {
+    /*useEffect(() => {
         fetch('/data/assetHealth.json')
             .then(response => response.json())
             .then(json => {
@@ -22,7 +27,8 @@ export default function AssetHealth() {
                 setError('Failed to load asset health data');
                 setLoading(false);
             })
-    },[])
+    },[]) */
+
 
     function toggleDetails(index) {
         setOpen(open === index ? null : index);
@@ -40,7 +46,7 @@ export default function AssetHealth() {
         <div className="widget">
             <h2>Asset Health Summary</h2>
             <div className="accordion">
-                {assets.map((asset, index) => (
+                {data.map((asset, index) => (
                     <div key={asset.building} className="accordion-item">
                         <button className="accordion-header" onClick={() => toggleDetails(index)}>
                             <span>{asset.building}</span>
